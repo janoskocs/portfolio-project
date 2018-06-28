@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .introName {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  text-align: center;
+}
+
+body .introName h1 {
+  font-family: "Ubuntu", sans-Serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+body .introName h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.85rem;
+  font-weight: 400;
+}
+
+body .introName a {
+  margin-top: 8%;
+  font-family: "Ubuntu", sans-Serif;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 1.45rem 0.7rem 1.45rem;
+  transition: ease .6s;
+  align-self: center;
+}
+
+body .introName a:hover {
+  background-color: grey;
+  color: white;
+}
+
+body .container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+body .container header {
+  text-align: center;
+}
+
+body .container header img {
+  width: 6.85%;
+  margin-top: 10px;
+}
+
+body .container header h1 {
+  font-family: "Ubuntu", sans-Serif;
+  margin-top: 10px;
+  font-size: 2.75rem;
+}
+
+body .container header h3 {
+  font-family: "Ubuntu", sans-Serif;
+  color: grey;
+  margin-top: 10px;
+  font-size: 1.85rem;
+  font-weight: 300;
+}
+
+body .container header p {
+  font-family: "Playfair Display", serif;
+  margin: 10px 0 10px 0;
+  font-size: 1.2rem;
+}
+
+body .container .container-icons {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: "Ubuntu", sans-Serif;
+  font-size: 1.15rem;
+}
+
+body .container .container-icons img {
+  width: 20%;
+}
+
+body .container .container-icons p {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=main.css.map */

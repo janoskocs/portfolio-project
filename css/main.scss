@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$main-font: 'Ubuntu', sans-Serif;
+$handwrite-font: 'Playfair Display', serif;
+$accent-color: grey;
+body {
+    
+    .introName {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15%;
+        text-align: center;
+
+        h1 {
+            font-family: $main-font;
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-family: $handwrite-font;
+            font-size: 2.85rem;
+            font-weight: 400;
+        }
+        a {
+            margin-top: 8%;
+            font-family: $main-font;
+            color: #000;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0.7rem 1.45rem 0.7rem 1.45rem;
+            transition: ease .6s;
+            align-self: center;
+            &:hover {
+                background-color: $accent-color;
+                color: white;
+            }
+        }
+    }//introName FIRST PAGE
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        header {
+            text-align: center;
+            img {
+                width: 6.85%;
+                margin-top: 10px;
+            }
+            h1 {
+                font-family: $main-font;
+                margin-top: 10px;
+                font-size: 2.75rem;
+            }
+            h3 {
+                font-family: $main-font;
+                color: grey;
+                margin-top: 10px;
+                font-size: 1.85rem;
+                font-weight: 300;
+            }
+            p {
+                font-family: $handwrite-font;
+                margin: 10px 0 10px 0;
+                font-size: 1.2rem;
+            }
+        }//HEADER
+        .container-icons {
+            margin-top: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-family: $main-font;
+            font-size: 1.15rem;
+            img {
+                width: 20%;
+            }
+            p {
+                margin-top: 1rem;
+            }
+        }
+    }
+}//BODY
