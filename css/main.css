@@ -1,12 +1,18 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body .introName {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 15%;
   text-align: center;
 }
@@ -30,12 +36,15 @@ body .introName a {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.7rem 1.45rem 0.7rem 1.45rem;
+  -webkit-transition: ease .6s;
   transition: ease .6s;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 body .introName a:hover {
-  background-color: grey;
+  background-color: #f34fb8;
   color: white;
 }
 
@@ -56,14 +65,14 @@ body .container header img {
 body .container header h1 {
   font-family: "Ubuntu", sans-Serif;
   margin-top: 10px;
-  font-size: 2.75rem;
+  font-size: 2.95rem;
 }
 
 body .container header h3 {
   font-family: "Ubuntu", sans-Serif;
-  color: grey;
+  color: #f34fb8;
   margin-top: 10px;
-  font-size: 1.85rem;
+  font-size: 1.55rem;
   font-weight: 300;
 }
 
@@ -71,22 +80,126 @@ body .container header p {
   font-family: "Playfair Display", serif;
   margin: 10px 0 10px 0;
   font-size: 1.2rem;
+  color: #5f5f5f;
 }
 
-body .container .container-icons {
+body .container header nav {
   margin-top: 2rem;
-  text-align: center;
+}
+
+body .container header nav a {
+  margin: 1rem;
+  text-decoration: none;
+  color: #f34fb8;
+  font-size: 1.3rem;
+  font-family: "Ubuntu", sans-Serif;
+  text-transform: uppercase;
+}
+
+body .container header nav a:hover {
+  color: #5f5f5f;
+}
+
+body .container-icons, body .skill-icons {
+  background-color: #efefef;
+  padding: 2rem;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   font-family: "Ubuntu", sans-Serif;
   font-size: 1.15rem;
 }
 
-body .container .container-icons img {
+body .container-icons img, body .skill-icons img {
   width: 20%;
 }
 
-body .container .container-icons p {
+body .container-icons p, body .skill-icons p {
   margin-top: 1rem;
+}
+
+body .about-me {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #5f5f5f;
+}
+
+body .about-me h2 {
+  font-family: "Ubuntu", sans-Serif;
+}
+
+body .about-me .about-me-picture {
+  margin-top: 2rem;
+  width: 10%;
+  border-radius: 100%;
+}
+
+body .about-me p {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 50%;
+  font-family: "Ubuntu", sans-Serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 1.1px;
+  color: #5f5f5f;
+}
+
+body .about-me .social-icons {
+  margin-top: 2rem;
+}
+
+body .about-me .social-icons a {
+  margin: 1rem;
+}
+
+body .about-me .social-icons a img {
+  max-width: 3%;
+}
+
+body #projects {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Ubuntu", sans-Serif;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+body #projects img {
+  width: 50%;
+  margin-top: 2rem;
+}
+
+body #projects h1 {
+  margin-top: 2rem;
+}
+
+body #projects p {
+  margin: 2rem auto 1rem auto;
+  width: 60%;
+  letter-spacing: 1.1px;
+  color: #5f5f5f;
+}
+
+body #projects a {
+  color: #f34fb8;
+}
+
+body #projects a:hover {
+  color: #5f5f5f;
+}
+
+body #projects .restaurant {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #5f5f5f;
 }
 /*# sourceMappingURL=main.css.map */

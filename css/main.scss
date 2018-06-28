@@ -5,7 +5,8 @@
 }
 $main-font: 'Ubuntu', sans-Serif;
 $handwrite-font: 'Playfair Display', serif;
-$accent-color: grey;
+$accent-color: #f34fb8;
+$secondary-color: #5f5f5f;
 body {
     
     .introName {
@@ -52,34 +53,130 @@ body {
             h1 {
                 font-family: $main-font;
                 margin-top: 10px;
-                font-size: 2.75rem;
+                font-size: 2.95rem;
             }
             h3 {
                 font-family: $main-font;
-                color: grey;
+                color: $accent-color;
                 margin-top: 10px;
-                font-size: 1.85rem;
+                font-size: 1.55rem;
                 font-weight: 300;
             }
             p {
                 font-family: $handwrite-font;
                 margin: 10px 0 10px 0;
                 font-size: 1.2rem;
+                color: $secondary-color;
+            }
+            nav {
+                margin-top: 2rem;
+                a {
+                    margin: 1rem;
+                    text-decoration: none;
+                    color: $accent-color;
+                    font-size: 1.3rem;
+                    font-family: $main-font;
+                    text-transform: uppercase;
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
             }
         }//HEADER
-        .container-icons {
+    }
+    .container-icons {
+        background-color: #efefef;
+
+        padding: 2rem;
+        margin-top: 2rem;
+        
+        display: flex;
+        justify-content: center;
+
+        text-align: center;
+        font-family: $main-font;
+        font-size: 1.15rem;
+        img {
+            width: 20%;
+        }
+        p {
+            margin-top: 1rem;
+        }
+    }
+    .about-me {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 2rem;
+
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $secondary-color;
+        h2 {
+            font-family: $main-font;
+        }
+        .about-me-picture {
             margin-top: 2rem;
-            text-align: center;
-            display: flex;
-            justify-content: center;
+            width: 10%;
+            border-radius: 100%;
+        }
+        p {
+            margin: 0 auto;
+            margin-top: 2rem;
+            width: 50%;
+
             font-family: $main-font;
             font-size: 1.15rem;
-            img {
-                width: 20%;
+            font-weight: 300;
+            letter-spacing: 1.1px;
+            color: $secondary-color;
+        }
+        .social-icons {
+            margin-top: 2rem;
+            a {
+                margin: 1rem;
+                img {
+                    max-width: 3%;              
+                }
+                
             }
-            p {
-                margin-top: 1rem;
+            
+        }
+    }//.about-me
+
+    .skill-icons {
+        @extend .container-icons;
+    }
+    #projects {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        font-family: $main-font;
+        font-size: 1.1rem;
+        margin-top: 2rem;
+        img {
+            width: 50%;
+            margin-top: 2rem;
+        }
+        h1 {
+            margin-top: 2rem;
+        }
+
+        p {
+            margin: 2rem auto 1rem auto;
+            width: 60%;
+            letter-spacing: 1.1px;
+            color: $secondary-color;
+        }
+        a {
+            color: $accent-color;
+            &:hover {
+                color: $secondary-color;
             }
         }
+        .restaurant {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $secondary-color;
+        }
+        
     }
 }//BODY
