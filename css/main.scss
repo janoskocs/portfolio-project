@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-$main-font: 'Ubuntu', sans-Serif;
+$main-font: 'Ubuntu', sans-serif;
 $handwrite-font: 'Playfair Display', serif;
 $accent-color: #f34fb8;
 $secondary-color: #5f5f5f;
@@ -48,7 +48,7 @@ body {
         header {
             text-align: center;
             img {
-                width: 5%;
+                width: 80px;
                 margin-top: 10px;
             }
             h1 {
@@ -98,7 +98,7 @@ body {
         font-family: $main-font;
         font-size: 1.15rem;
         img {
-            width: 20%;
+            width: 20%
         }
         p {
             margin-top: 1rem;
@@ -120,7 +120,7 @@ body {
         }
         .about-me-picture {
             margin-top: 2rem;
-            width: 10%;
+            width: 125px;
             border-radius: 100%;
         }
         p {
@@ -139,7 +139,7 @@ body {
             a {
                 margin: 1rem;
                 img {
-                    max-width: 3%;
+                    max-width: 32px;
                     &:hover {
                         transform: scale(1.1);
                     }            
@@ -159,7 +159,7 @@ body {
         font-size: 1.1rem;
         margin-top: 2rem;
         img {
-            width: 50%;
+            width: 400px;
             margin-top: 2rem;
             border-radius: 1%;
         }
@@ -258,3 +258,56 @@ body {
         }
     }
 }//BODY
+
+//RESPONSIVE
+@media only screen and (max-width: 720px) {
+    .container-icons {
+        flex-wrap: wrap;
+        div {
+            margin-top: 1rem;
+            img {
+                width: 22%;
+            }
+        }
+    }
+    
+    #about {
+        
+        p {
+            width: 80%;
+        }
+    }
+}
+@media only screen and (max-width: 550px) {
+    .container {
+        header {
+            nav {
+               display: flex;
+               flex-direction: column; 
+            }
+        }
+    }
+    #projects {
+        .restaurant {
+            img {
+                width: 200px;
+            }
+            p {
+                width: 85%;
+            }
+        }
+        .landingpage {
+            img {
+                width: 200px;
+            }
+            p {
+                width: 85%;
+            }
+        }
+    }
+    #formId {
+        width: 85%;
+    }
+}
+
+

@@ -88,12 +88,11 @@
         <div class="contact-form" id="contact">
             <h1>Contact</h1>
             <h3>I'd <span>&#10084;</span> to help!</h3>
-            <form action="send.php">
-
-                <input type="text" id="name" name="name" placeholder="Your name..">
-                <input type="email" id="email" name="email" placeholder="Your email..">
-                <textarea id="subject" name="subject" placeholder="Please leave a message.."></textarea>
-                <input type="submit" value="Submit">
+            <form action="mail/send.php" method="POST" id="formId">
+                <input type="text" id="user_name" name="name" placeholder="Your name.." required>
+                <input type="email" id="email" name="user_email" placeholder="Your email.." required>
+                <textarea id="subject" name="user_message" placeholder="Please leave a message.." required></textarea>
+                <input type="submit" value="Send">
             </form>
         </div>
         <footer>

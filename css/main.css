@@ -18,7 +18,7 @@ body .introName {
 }
 
 body .introName h1, body .introName .contact-form h3, body .contact-form .introName h3 {
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
 }
@@ -31,7 +31,7 @@ body .introName h3 {
 
 body .introName a {
   margin-top: 8%;
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
@@ -58,18 +58,18 @@ body .container header {
 }
 
 body .container header img {
-  width: 5%;
+  width: 80px;
   margin-top: 10px;
 }
 
 body .container header h1, body .container header .contact-form h3, body .contact-form .container header h3 {
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   margin-top: 10px;
   font-size: 2.95rem;
 }
 
 body .container header h3 {
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   color: #f34fb8;
   margin-top: 10px;
   font-size: 1.55rem;
@@ -92,7 +92,7 @@ body .container header nav a {
   text-decoration: none;
   color: #f34fb8;
   font-size: 1.3rem;
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
 }
 
@@ -111,7 +111,7 @@ body .container-icons, body .skill-icons {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.15rem;
 }
 
@@ -137,12 +137,12 @@ body .about-me {
 }
 
 body .about-me h2 {
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 body .about-me .about-me-picture {
   margin-top: 2rem;
-  width: 10%;
+  width: 125px;
   border-radius: 100%;
 }
 
@@ -150,7 +150,7 @@ body .about-me p {
   margin: 0 auto;
   margin-top: 2rem;
   width: 50%;
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.15rem;
   font-weight: 300;
   letter-spacing: 1.1px;
@@ -166,7 +166,7 @@ body .about-me .social-icons a {
 }
 
 body .about-me .social-icons a img {
-  max-width: 3%;
+  max-width: 32px;
 }
 
 body .about-me .social-icons a img:hover {
@@ -178,13 +178,13 @@ body #projects {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.1rem;
   margin-top: 2rem;
 }
 
 body #projects img {
-  width: 50%;
+  width: 400px;
   margin-top: 2rem;
   border-radius: 1%;
 }
@@ -220,7 +220,7 @@ body .contact-form {
 }
 
 body .contact-form h1, body .contact-form h3 {
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   padding-top: 2rem;
 }
 
@@ -246,14 +246,14 @@ body .contact-form form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.1rem;
 }
 
 body .contact-form form input, body .contact-form form textarea {
   margin-top: 1rem;
   padding: 0.5rem;
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
   color: #f34fb8;
   font-size: 1.1rem;
   border: 1px solid #5f5f5f;
@@ -292,7 +292,7 @@ body footer {
           align-items: center;
   color: #5f5f5f;
   font-size: 1.5rem;
-  font-family: "Ubuntu", sans-Serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 body footer a {
@@ -306,5 +306,48 @@ body footer a {
 
 body footer a:hover {
   background-color: #f34fb8;
+}
+
+@media only screen and (max-width: 720px) {
+  .container-icons, body .skill-icons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container-icons div, body .skill-icons div {
+    margin-top: 1rem;
+  }
+  .container-icons div img, body .skill-icons div img {
+    width: 22%;
+  }
+  #about p {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .container header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #projects .restaurant img {
+    width: 200px;
+  }
+  #projects .restaurant p {
+    width: 85%;
+  }
+  #projects .landingpage img {
+    width: 200px;
+  }
+  #projects .landingpage p {
+    width: 85%;
+  }
+  #formId {
+    width: 85%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
