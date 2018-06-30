@@ -7,6 +7,7 @@ $main-font: 'Ubuntu', sans-Serif;
 $handwrite-font: 'Playfair Display', serif;
 $accent-color: #f34fb8;
 $secondary-color: #5f5f5f;
+$light-touch: #efefef;
 body {
     
     .introName {
@@ -47,7 +48,7 @@ body {
         header {
             text-align: center;
             img {
-                width: 6.85%;
+                width: 5%;
                 margin-top: 10px;
             }
             h1 {
@@ -85,7 +86,7 @@ body {
         }//HEADER
     }
     .container-icons {
-        background-color: #efefef;
+        background-color: $light-touch;
 
         padding: 2rem;
         margin-top: 2rem;
@@ -102,6 +103,9 @@ body {
         p {
             margin-top: 1rem;
         }
+    }
+    .hidden {
+        visibility: hidden;
     }
     .about-me {
         width: 90%;
@@ -135,14 +139,15 @@ body {
             a {
                 margin: 1rem;
                 img {
-                    max-width: 3%;              
+                    max-width: 3%;
+                    &:hover {
+                        transform: scale(1.1);
+                    }            
                 }
                 
             }
-            
         }
     }//.about-me
-
     .skill-icons {
         @extend .container-icons;
     }
@@ -156,6 +161,7 @@ body {
         img {
             width: 50%;
             margin-top: 2rem;
+            border-radius: 1%;
         }
         h1 {
             margin-top: 2rem;
@@ -177,6 +183,78 @@ body {
             padding-bottom: 2rem;
             border-bottom: 1px solid $secondary-color;
         }
-        
+    }//#projects
+    .contact-form {
+        background-color: $light-touch;
+        margin-top: 2rem;
+        text-align: center;
+        h1 {
+            font-family: $main-font;
+            padding-top: 2rem;
+        }
+        h3 {
+            @extend h1;
+            color: $secondary-color;
+            padding-top: 0.5rem;
+            font-family: $handwrite-font;
+            span {
+                color: $accent-color;
+            }
+        }
+        form {
+            padding-top: 2rem;
+            width: 60%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            font-family: $main-font;
+            font-size: 1.1rem;
+            input {
+                margin-top: 1rem;
+                padding: 0.5rem;
+                font-family: $main-font;
+                color: $accent-color;
+                font-size: 1.1rem;
+                border: 1px solid $secondary-color;
+                outline-color: $accent-color;
+            }
+            textarea {
+                @extend input;
+                padding: 1.2rem;
+            }
+            input[type="submit"] {
+                color: #fff;
+                background-color: $secondary-color;
+                outline: none;
+                border: none;
+                transition: .45s ease;
+                
+                &:hover {
+                    background-color: $accent-color;
+                }
+            }
+        }
+    }
+    footer {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $secondary-color;
+        font-size: 1.5rem;
+        font-family: $main-font;
+        a {
+            text-decoration: none;
+            background-color: $secondary-color;
+            color: #fff;
+            padding: 1rem;
+            transition: .45s ease;
+            &:hover {
+                background-color: $accent-color;
+            }
+        }
     }
 }//BODY

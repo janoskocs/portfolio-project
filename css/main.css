@@ -17,7 +17,7 @@ body .introName {
   text-align: center;
 }
 
-body .introName h1 {
+body .introName h1, body .introName .contact-form h3, body .contact-form .introName h3 {
   font-family: "Ubuntu", sans-Serif;
   font-size: 4rem;
   text-transform: uppercase;
@@ -58,11 +58,11 @@ body .container header {
 }
 
 body .container header img {
-  width: 6.85%;
+  width: 5%;
   margin-top: 10px;
 }
 
-body .container header h1 {
+body .container header h1, body .container header .contact-form h3, body .contact-form .container header h3 {
   font-family: "Ubuntu", sans-Serif;
   margin-top: 10px;
   font-size: 2.95rem;
@@ -123,6 +123,10 @@ body .container-icons p, body .skill-icons p {
   margin-top: 1rem;
 }
 
+body .hidden {
+  visibility: hidden;
+}
+
 body .about-me {
   width: 90%;
   text-align: center;
@@ -165,6 +169,11 @@ body .about-me .social-icons a img {
   max-width: 3%;
 }
 
+body .about-me .social-icons a img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 body #projects {
   width: 90%;
   margin: 0 auto;
@@ -177,9 +186,10 @@ body #projects {
 body #projects img {
   width: 50%;
   margin-top: 2rem;
+  border-radius: 1%;
 }
 
-body #projects h1 {
+body #projects h1, body #projects .contact-form h3, body .contact-form #projects h3 {
   margin-top: 2rem;
 }
 
@@ -201,5 +211,100 @@ body #projects a:hover {
 body #projects .restaurant {
   padding-bottom: 2rem;
   border-bottom: 1px solid #5f5f5f;
+}
+
+body .contact-form {
+  background-color: #efefef;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+body .contact-form h1, body .contact-form h3 {
+  font-family: "Ubuntu", sans-Serif;
+  padding-top: 2rem;
+}
+
+body .contact-form h3 {
+  color: #5f5f5f;
+  padding-top: 0.5rem;
+  font-family: "Playfair Display", serif;
+}
+
+body .contact-form h3 span {
+  color: #f34fb8;
+}
+
+body .contact-form form {
+  padding-top: 2rem;
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Ubuntu", sans-Serif;
+  font-size: 1.1rem;
+}
+
+body .contact-form form input, body .contact-form form textarea {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-family: "Ubuntu", sans-Serif;
+  color: #f34fb8;
+  font-size: 1.1rem;
+  border: 1px solid #5f5f5f;
+  outline-color: #f34fb8;
+}
+
+body .contact-form form textarea {
+  padding: 1.2rem;
+}
+
+body .contact-form form input[type="submit"], body .contact-form form textarea[type="submit"] {
+  color: #fff;
+  background-color: #5f5f5f;
+  outline: none;
+  border: none;
+  -webkit-transition: .45s ease;
+  transition: .45s ease;
+}
+
+body .contact-form form input[type="submit"]:hover, body .contact-form form textarea[type="submit"]:hover {
+  background-color: #f34fb8;
+}
+
+body footer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #5f5f5f;
+  font-size: 1.5rem;
+  font-family: "Ubuntu", sans-Serif;
+}
+
+body footer a {
+  text-decoration: none;
+  background-color: #5f5f5f;
+  color: #fff;
+  padding: 1rem;
+  -webkit-transition: .45s ease;
+  transition: .45s ease;
+}
+
+body footer a:hover {
+  background-color: #f34fb8;
 }
 /*# sourceMappingURL=main.css.map */
