@@ -1,0 +1,421 @@
+
+@import "vars";
+@import "mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+body {
+    header {
+        .headerContainer {
+            background: linear-gradient(45deg, $main-blue, $light-blue );
+            .iconNav {
+                width: 80vw;
+                margin: 0 auto;
+                margin-bottom: 10vh;
+                display: flex;
+                justify-content: space-between;
+                padding: 1%;
+                @include anchor(2rem, uppercase);
+                .treeIcon {
+                    span {
+                        color: $main-blue;
+                        background: $accent-second;
+                        padding: 1rem;
+                    }
+                }//.treeIcon
+                nav {
+                    a {
+                        color: $accent-second;
+                        text-decoration: none;
+                        font-size: 1.4rem !important;
+                        padding: 1.5rem;
+                        margin-right: 1rem;
+                        transition: .2s ease;
+                        
+                        &:hover {
+                            transition: .2s ease;
+                            color: $main-green;
+                        }//hover
+                    }//a 
+                }//nav
+            }//.iconNav
+        }//headerContainer
+        .welcome {
+            margin: 0 auto;
+            width: 80vw;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            img {
+                max-width: 35%;
+                align-self: flex-end;
+                margin-bottom: -4vh;
+            }
+            .welcomeText {
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                @include anchor(2rem, none);
+                p {
+                    font-size: 1rem !important;
+                }//p
+                a {
+                    color: $accent-second;
+                    background-color: $main-green;
+                    border-radius: 3%;
+                    text-decoration: none;
+                    text-align: center;
+                    align-self: center;
+                    margin-top: 2vh;
+                    margin-bottom: 2vh;
+                    width: 60%;
+                    border: 1px solid $main-green;
+                    transition: .3s ease;
+                    &:hover {
+                        background: $main-blue;
+                    }
+                }
+            }
+        }
+    }//header
+    #about {
+        width: 90vw;
+        margin: 0 auto;
+        margin-top: 10vh;
+        .aboutContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            img {
+                max-width: 45vw;
+            }
+            .aboutText {
+                width: 45vw;
+                h1 {
+                    @include anchor(2.5rem, none);
+                    color: $header !important;
+                }
+                h2 {
+                    @include anchor(2rem, none);
+                    color: $main-green !important;
+                }
+                p {
+                    margin-top: 2vh;
+                    @include anchor (1rem, none);
+                    color: $header;
+                }
+            }//.aboutText
+        }//.aboutContainer
+    }//#about
+    #donate {
+        background: linear-gradient($light-blue, $main-blue);
+        margin-top: -4vh;
+        h1 {
+            text-align: center;
+            padding-top: 2rem;
+            @include anchor(2rem, none);
+
+        }
+        .donateContainer {
+            padding: 2%;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+
+            .donateBox {
+                background: $accent-second;
+                padding: 3.5rem;
+                transition: .6s ease;
+                margin-bottom: 1rem;
+                h2 {
+                    @include anchor(2.3rem, none);
+                    color: $main-green !important;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    @include anchor(1.5rem, none);
+                    color: $header !important;
+                    margin-bottom: 1rem;
+                }
+                ul {
+                    @include anchor(1rem, none);
+                    color: $header !important;
+                    list-style-type: none;
+
+                    li {
+                        text-align: left;
+                        &::before {
+                            content: "●";
+                            color: $main-green; 
+                            margin-right: 1rem;
+                          }
+                    }
+                }
+                a {
+                    margin-top: 1.7rem;
+                    @include anchor(1.7rem, uppercase);
+                    color: $accent-second;
+                    text-decoration: none;
+                    background: $main-green;
+                    padding: 1rem 5rem 1rem 5rem;
+                    border-radius: 3%;
+                    display: block;
+                    transition: .3s ease;
+                    &:hover {
+                        background: $light-blue;
+                        transition: .3s ease;
+                    }
+                }//a
+                &:hover {
+                    transition: .6s ease;
+                    box-shadow: 0px 10px 25px rgba(0,0,0, .5);
+                }
+            }//.donatebox
+        }
+    }
+    .aboutContainerSecond {
+        width: 90vw;
+        margin: 0 auto;
+        padding-top: 6vh;
+        .aboutContainerFlex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            .bough {
+                align-self: flex-end;
+                img {
+                    margin-top: -8vh;
+                    width: 45vw;
+                }
+            }
+            .aboutText {
+                width: 45vw;
+                h1 {
+                    @include anchor(2.4rem, none);
+                    color: $header;
+                    margin-bottom: 1rem;
+                }
+                h2 {
+                    @include anchor(1.7rem, none);
+                    color: $main-green;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    @include anchor(1rem, none);
+                    color: $header;
+                    
+                }
+            }
+        }
+    }
+    .lastCTA {
+        background: 
+            linear-gradient(rgba(48, 177, 51, .8), rgba(95, 70, 190, .8)),
+            url(../img/mountains1280.png);
+        .lastCTAText {
+            padding: 10%;
+            text-align: center;
+            h1 {
+                @include anchor(2rem, none);
+                margin-bottom: 1.3rem;
+            }
+            p {
+                @include anchor(1rem, none);
+            }
+        }
+    }
+    #contact {
+        background: $accent;
+        text-align: center;
+        h1 {
+            padding-top: 2rem;
+            @include anchor(2rem, none);
+            color: $header;
+        }
+        h2 {
+            @include anchor(2rem, none);
+            color: $main-green;
+        }
+        form {
+            width: 80vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            @include anchor(1rem, none);
+            color: $header;
+            label {
+                text-align: left;
+                margin-top: 1rem;
+            }
+            input {
+                outline: none;
+                border: 1px solid $accent;
+                border-radius: 3%;
+                padding: .5rem;
+                @include anchor(1rem, none);
+                color: $header;
+            }
+            textarea {
+                @extend input;
+                margin-bottom: 2rem;
+            }
+            input[type="submit"] {
+                background: $main-green;
+                transition: .3s ease;
+                color: $accent-second;
+                margin-bottom: 2rem;
+                &:hover {
+                    transition: .3s ease;
+                    background: $light-blue;
+                }
+            }
+        }
+    }//.aboutContainerSecond
+    footer {
+        background: $light-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .treeIcon {
+            @include anchor(1.5rem, uppercase);
+            margin-bottom: 2rem;
+            padding-top: 2rem;
+            span{
+                color: $main-blue;
+                background: $accent-second;
+            }
+        }
+        h1 {
+            @include anchor(1.5rem, none);
+            margin-bottom:2rem;
+        }
+        a {
+            margin-bottom: 2rem;
+            @include anchor(1rem, uppercase);
+        }
+        .spacer{
+            height: 5vh;
+        }
+    }//footer
+
+    .popUp {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: $header;
+        background-color: rgba(0,0,0,0.4);
+        .popUpContent {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            animation-name: animatetop;
+            animation-duration: 0.8s;
+            h1 {
+                @include anchor(2rem, none);
+                color: $main-green;
+            }
+            p {
+                @include anchor(1.7rem, none);
+                color: $header;
+                
+            }
+            span {
+                display: inline-block;
+                margin-top: 4vh;
+                color: $main-green;
+                font-size: 2rem;
+                border: 1px solid $main-green;
+                border-radius: 100%;
+                padding: 1rem 1.8rem 1rem 1.8rem;
+            }
+            .close {
+                @include anchor(2rem, none);
+                padding: 2rem;
+                color: red;
+                display: inline-block;
+                border-bottom: 1px solid transparent;
+                &:hover {
+                    color: $header;
+                    border-bottom: 1px solid $header;
+                    cursor: pointer;
+                }
+            }
+        } 
+    }
+}//body
+
+@media screen and (max-width: 720px) {
+    body {
+        #about {
+            .aboutContainer {
+                .aboutText {
+                    width: 70vw;
+                }
+            }
+        }
+        .aboutContainerSecond {
+            .aboutContainerFlex {
+                .aboutText {
+                    width: 70vw;
+                    margin-bottom: 3vh;
+                }
+            }
+        }
+        #donate {
+            h1 {
+                margin: 2vh;
+            }
+        }
+    }
+    header {
+        .welcome {
+            .welcomeText {
+                h1 {
+                    text-align: center;
+                    font-size: 2.7rem;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+        .headerContainer {
+            .iconNav {
+                flex-direction: column;
+                .treeIcon {
+                    text-align: center;
+                }
+                nav {
+                    margin-top: 5vh;
+                    text-align: center;
+                    a {
+                        margin-bottom: 2vh;
+                    }
+                }
+            }
+        }
+    }
+}

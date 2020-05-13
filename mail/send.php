@@ -4,8 +4,8 @@ $user_email = $_POST["user_email"];
 $user_message = $_POST["user_message"];
 
 $to      = 'contact@janoskocs.com';
-$subject = Mail from Portfolio
-$message = $user_message . 'Sender\'s name is: ' . $user_name . ' <br>';
+$subject = 'Mail from ' . $user_name;
+$message = $user_message . ' Sender\'s name is: ' . $user_name;
 $headers = 'From: Portfolio' . "\r\n" .
     'Reply-To: '.$user_email."\r\n" .
     'X-Mailer: PHP/';
@@ -42,6 +42,6 @@ mail($to, $subject, $message, $headers);
     <img src="../img/pink_checkmark.png" alt="Picture of a checkmark on a microchip." draggable="false">
     <h1>Thank you <?php echo $user_name ?>!</h1>
     <h3>Your message has been sent to contact@janoskocs.com.</h3>
-    <a href="http://janoskocs.com">Go back to janoskocs.com</a>
+    <a href="https://janoskocs.com">Go back to janoskocs.com</a>
 </body>
 </html>

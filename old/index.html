@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+Janos Kocs 2018
+https://github.com/janoskocs
+
+fullPage.js
+Thanks alvarotrigo!
+https://github.com/alvarotrigo/fullPage.js
+
+-->
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>János Kócs | Portfolio</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+  </head>
+  <body>
+
+    <div id="navbar">
+      <div class="navbarWrap">
+        <img src="img/logo.svg" alt="Picture of a Microchip" draggable="false">
+        <h1>János Kócs</h1>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact" class="cta" id="call-to-action">Contact</a></li>
+        </ul>
+      </div>
+    </div> <!-- END OF NAVBAR DIV -->
+
+    <div id="wrapper">
+
+      <div class="section front-page" data-anchor="Home">
+         <div class="title-front">
+           <h1>I'm János</h1>
+           <h2>I make these components work together.</h2>
+        </div>
+        <div class="components">
+            <img src="img/htmllogo.png" alt="Picture of a Microchip" draggable="false">
+            <img src="img/csslogo.png" alt="Picture of a Microchip"   draggable="false">
+            <img src="img/jslogo.png" alt="Picture of a Microchip"  draggable="false">
+            <img src="img/sasslogo.png" alt="Picture of a Microchip"  draggable="false">
+       </div>
+        <div class="arrow-wrap">
+          <img class="arrow" src="img/arrow.svg" alt="Picture of an arrow pointing downwards.">
+        </div>
+      </div> <!--FRONT PAGE END DIV -->
+
+      <div class="section about-page" data-anchor="About">
+        <div class="about-page-wrapper" id="newspaper">
+          <div class="spacer"></div><!-- TO ADD MARGIN-BOTTOM -->
+          <div class="about-me-top" id="newspaper-title">
+            <p>The Web Developer Times</p>
+            <p>Page 2 of 4</p>
+            <p id="currentTime">Please enable Javascript to use this feature.</p>
+          </div>
+          <div class="about-me-content">
+            <h1 id="big-title">About me</h1>
+            <img id="picture-of-me" src="img/janoskocs.png" alt="Picture of János Kócs" draggable="false">
+            <div class="about-me-text-img">
+              <p id="para-about-me">János likes to write code and make stuff appear on the screen. He is self-taught and driven to learn more. He was born in Romania and grew up in a small town. He quickly developed an interest to tinker with hardware and software.
+              <br>
+              As an apprentice, he would like to work with inspiring developers and designers to create stunning websites.
+              <br>
+              When he is not coding, he likes to play video games.
+              <br>
+              <a href="https://twitter.com/johnjjwhite">Follow me on twitter!</a>
+              <br>
+              <a href="https://github.com/janoskocs">Let's code together on GitHub</a>
+              </p>
+           </div>
+          </div>
+        </div>
+      </div> <!--ABOUT ME  END DIV -->
+
+      <div class="section projects-page" data-anchor="Projects">
+          <div class="spacer"></div>
+
+          <div class="projects-flex-container">
+            <div class="sunset">
+              <h1>Online Table Booking</h1>
+              <img src="img/restaurant.jpg" alt="Picture of a restaurant web page">
+              <p>I have learned about how user interaction can be controlled and adjusted for the best experience. I used vanilla Javascript to render pages.</p>
+              <a href="http://restaurant.janoskocs.com" target="_blank">Check it out!</a>
+              <br>
+              <a href="https://github.com/janoskocs/restaurant-app" target="_blank">Check out the source code!</a>
+            </div>
+            <div class="sunset">
+              <h1>Landing page</h1>
+              <img src="img/landingpage.jpg" alt="Picture of a charity web page">
+              <p>I worked with flexbox to position the elements. I learned about design principles and how to apply them. </p>
+              <a href="http://landingpage.janoskocs.com" target="_blank">Check it out!</a>
+              <br>
+              <a href="https://github.com/janoskocs/charity-landingpage-portfolio" target="_blank">Check out the source code!</a>
+            </div>
+          </div>
+          
+
+      </div> <!--PROJECTS  END DIV -->
+
+      <div class="section contact-page" data-anchor="Contact">
+        <div class="contact-page-wrapper">
+          <div class="spacer"></div><!-- TO ADD MARGIN-BOTTOM -->
+            <div class="contact-form" id="contact-mobile">
+              <div class="lets-talk-top">
+                <h1>Contact</h1>
+                <h2>I'd <span>&#10084;</span> to help!</h2>
+              </div>
+              <div class="color-ruler"></div>
+
+              <form action="mail/send.php" method="POST">
+                <input type="text" name="user_name" placeholder="Enter your name" required>
+                <input type="email" name="user_email"
+                placeholder="Enter your email" required>
+                <input type="text" name="user_subject" placeholder="Enter the subject" required>
+                <textarea name="user_message" required
+                placeholder="Please leave a message!" rows="5"></textarea>
+                <input type="submit" value="Send">
+              </form>
+           </div><!--CONTACT-FORM -->
+         </div><!--CONTACT-PAGE-WRAPPER -->
+      </div> <!--CONTACT  END DIV -->
+
+    </div> <!-- WRAPPER END DIV -->
+
+    <script>
+      $(document).ready(function() {
+        $('#wrapper').fullpage();
+
+        lockAnchors:true
+
+        var d = new Date();
+        var month = d.getMonth();
+        var day = d.getDay();
+        var dateNow = d.getDate();
+        var year = d.getFullYear();
+
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        var wholeDate = days[day] + ", " + dateNow + " " + months[month] + " " + year;
+        document.getElementById("currentTime").innerHTML = wholeDate;
+
+      });
+    </script>
+
+  </body>
+</html>

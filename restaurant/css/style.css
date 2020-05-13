@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url("../img/hero1280gradient.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body #appFrame #errorBox, body #appFrame .pageContainer #confirmBox {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.1rem;
+  color: #cc0000;
+  background: rgba(255, 255, 255, 0.5);
+  height: 20vh;
+  padding: 2rem;
+  text-align: center;
+  visibility: hidden;
+}
+
+body #appFrame .steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+body #appFrame .steps p {
+  margin: 1rem;
+}
+
+body #appFrame #customerName {
+  text-transform: capitalize;
+}
+
+body #appFrame .pageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-y: auto;
+  height: 100vh;
+  text-align: center;
+}
+
+body #appFrame .pageContainer img {
+  width: 7rem;
+}
+
+body #appFrame .pageContainer #header {
+  width: 85vw;
+}
+
+body #appFrame .pageContainer #header h1 {
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0px 2px 20px #d86337;
+}
+
+body #appFrame .pageContainer #header p {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0px 2px 20px #d86337;
+}
+
+body #appFrame .pageContainer #customerNameInput {
+  display: inline;
+  padding: 1rem;
+}
+
+body #appFrame .pageContainer #customerNameInput input {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2rem;
+  color: #FF69B4;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 4vh;
+  -webkit-transition: .3 ease;
+  transition: .3 ease;
+}
+
+body #appFrame .pageContainer #customerNameInput:after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px #FF69B4;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+body #appFrame .pageContainer #customerNameInput:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+body #appFrame .pageContainer ::-webkit-input-placeholder {
+  color: #228cda;
+  opacity: 1;
+}
+
+body #appFrame .pageContainer :-ms-input-placeholder {
+  color: #228cda;
+  opacity: 1;
+}
+
+body #appFrame .pageContainer ::-ms-input-placeholder {
+  color: #228cda;
+  opacity: 1;
+}
+
+body #appFrame .pageContainer ::placeholder {
+  color: #228cda;
+  opacity: 1;
+}
+
+body #appFrame .pageContainer :-ms-input-placeholder {
+  color: #228cda;
+}
+
+body #appFrame .pageContainer :-ms-input-placeholder {
+  color: #228cda;
+}
+
+body #appFrame .pageContainer button, body #appFrame .pageContainer a {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  background: none;
+  padding: 1.5rem;
+  outline: none;
+  margin-top: 4vh;
+}
+
+body #appFrame .pageContainer button:after, body #appFrame .pageContainer a:after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px #FF69B4;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+body #appFrame .pageContainer button:hover:after, body #appFrame .pageContainer a:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+body #appFrame .pageContainer .tableCount input, body #appFrame .pageContainer .datePicker input, body #appFrame .pageContainer .tableCount select, body #appFrame .pageContainer .datePicker select {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 4vh;
+  background: rgba(25, 98, 141, 0.5);
+  margin: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+body #appFrame .pageContainer .tableCount input:hover, body #appFrame .pageContainer .datePicker input:hover, body #appFrame .pageContainer .tableCount select:hover, body #appFrame .pageContainer .datePicker select:hover {
+  -webkit-box-shadow: 0 3px 7px #d98592;
+          box-shadow: 0 3px 7px #d98592;
+}
+
+body #appFrame .pageContainer .tableCount .seatBtn, body #appFrame .pageContainer .datePicker .seatBtn {
+  padding: 1rem;
+}
+
+body #appFrame .pageContainer #errorBox input, body #appFrame .pageContainer #confirmBox input {
+  border: none;
+  background: none;
+  padding: 1rem;
+  outline: none;
+  font-family: 'Righteous', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0.5rem;
+  background: rgba(25, 98, 141, 0.5);
+}
+
+body #appFrame .pageContainer #errorBox input:hover, body #appFrame .pageContainer #confirmBox input:hover {
+  -webkit-box-shadow: 0 3px 7px #d98592;
+          box-shadow: 0 3px 7px #d98592;
+}
+
+body #appFrame .pageContainer #foodPicker input {
+  border: none;
+  background: none;
+  padding: 1rem;
+  outline: none;
+  font-family: 'Righteous', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #19628d;
+  margin: 0.5rem;
+}
+
+body #appFrame .pageContainer #foodPicker input:hover {
+  -webkit-box-shadow: 0 3px 7px #d98592;
+          box-shadow: 0 3px 7px #d98592;
+}
+
+body #appFrame .pageContainer #confirmBox {
+  visibility: visible;
+  font-family: 'Righteous', sans-serif;
+  font-size: 1rem;
+  color: #19628d;
+  padding: 0;
+}
+
+body #appFrame .pageContainer a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  body #appFrame .pageContainer #customerNameInput {
+    padding: 0;
+  }
+  body #appFrame .pageContainer #customerNameInput #userNameInput {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  body #appFrame .pageContainer #errorBox, body #appFrame .pageContainer #confirmBox {
+    height: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,70 @@
+@media screen and (max-width: 480px) {
+  ul {
+    li {
+      a {
+        display: none;
+      }
+      .cta {
+        display: block;
+      }
+    }
+  }
+  #navbar {
+    height: 10vh;
+
+   .navbarWrap {
+     img {
+       height: 10vh;
+     }
+   }
+    h1 {
+      text-align: center;
+      font-size: 1em;
+    }
+  }
+  #wrapper {
+    .front-page {
+      .title-front {
+        h2 {
+          display: none;
+        }//H2
+      }//TITLE-FRONT
+    }//FRONT-PAGE
+
+    .about-page {
+      .about-page-wrapper {
+        .spacer {
+          height: 8vh;
+        }
+        .about-me-content {
+          h1 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+          }
+          img {
+            margin: 0;
+            width: 15vw;
+          }
+          .about-me-text-img {
+            #para-about-me {
+              width: 99.5%;
+            }
+          }//ABOUT-ME-TEXT-IMG
+        }//ABOUT-ME-CONTENT
+      }//ABOUT-PAGE-WRAPPER
+    }//ABOUT-PAGE
+    .contact-page-wrapper {
+      .contact-form {
+        .lets-talk-top {
+          h1, h2 {
+            font-size: 1em;
+            margin-top: 3px;
+          }//H1, H2
+        }//LETS-TALK-TOP
+        form {
+
+        }
+      }//CONTACT-FORM
+    }//CONTACT-PAGE-WRAPPER
+  }//WRAPPER
+}

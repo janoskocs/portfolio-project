@@ -1,0 +1,41 @@
+
+
+//FONTS
+@mixin main-font($size, $color) {
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: $size;
+    color: $color;
+    text-shadow: 0px 2px 20px $accent-orange;
+}
+
+@mixin general-font ($size, $color) {
+    font-family: 'Righteous', sans-serif;
+    font-size: $size;
+    color: $color;
+}
+
+//BUTTONS
+@mixin general-button ($padding) {
+    border: none;
+    background: none;
+    padding: $padding;
+    outline: none;
+}
+@mixin border-bottom-expand () {
+    display: block;
+    content: '';
+    border-bottom: solid 2px $accent-color;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+@mixin inputReset () {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+//KEYFRAMES 
+
+
+//COMPATIBILITY MIXINS

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>János Kócs | Web Developer Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i|Ubuntu:700,300" rel="stylesheet">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <header id="top">
+                <img src="../img/logo.png" alt="Picture of a colourful microchip." draggable="false" class="animated bounceIn">
+                <h1 class="animated bounceInDown">János Kócs</h1>
+                <h3 class="animated bounceIn">Web Developer Portfolio</h3>
+                <p class="animated bounceInUp">"If you always do what you’ve always done, you’ll always get what you’ve always got."</p>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </header>
+        </div>
+        <div class="container-icons">
+                <div class="animated fadeInLeft">
+                    <img src="../img/chip_london.png" alt="Picture of Big Ben on a microchip." draggable="false">
+                    <p>Based in London, UK.</p>
+                </div>
+                <div class="animated fadeInUp">
+                    <img src="../img/chip_code.png" alt="Picture of computer code on a microchip." draggable="false">
+                    <p>Passionate about writing code.</p>
+                </div>
+                <div class="animated fadeInRight">
+                    <img src="../img/chip_coffee.png" alt="Picture of a cup of coffee on a microchip.">
+                    <p>Loves ideas.</p>
+                </div>
+        </div><!-- .container-icons -->
+
+        <div class="about-me" id="about">
+            <h2>About me...</h2>
+            <img src="../img/janoskocs.jpg" alt="Picture of János Kócs" draggable="false" class="about-me-picture">
+            <p>János likes to write code and make stuff appear on the screen. He is self-taught and driven to learn more. He was born in Romania and grew up in a small town. He quickly developed an interest to tinker with hardware and software. As an apprentice, he would like to work with inspiring developers and designers to create stunning websites. When he is not coding, he likes to play video games. 
+            </p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/janos.kocs/" target="_blank"><img src="../img/instagram.svg" alt="Picture of a camera. Logo of Instagram."></a>
+                <a href="https://twitter.com/janoskocs" target="_blank"><img src="../img/twitter.svg" alt="Picture of a bird. Logo of Twitter."></a>
+                <a href="https://github.com/janoskocs" target="_blank"><img src="../img/github.svg" alt="Picture of a cat. Logo of Github."></a>
+            </div>
+        </div><!-- .about-me -->
+        <div class="skill-icons">
+            <div>
+                <img src="../img/html.png" alt="Logo of HTML5 on a microchip." draggable="false">
+                <p>HTML5.</p>
+            </div>
+            <div>
+                <img src="../img/css.png" alt="Logo of CSS3 on a microchip." draggable="false">
+                <p>CSS3.</p>
+            </div>
+            <div>
+                <img src="../img/js.png" alt="Logo of Javascript on a microchip." draggable="false">
+                <p>Javascript.</p>
+            </div>
+            <div>
+                <img src="../img/sass.png" alt="Logo of Sass on a microchip." draggable="false">
+                <p>Sass.</p>
+            </div>
+        </div>
+        <div id="projects">
+            <div class="restaurant" >
+                <h1>21st Century Online Table Booking</h1>
+                <img src="../img/restaurant.jpg" alt="Screenshot of a resturant website page." draggable="false" id="restaurantImg">
+                <p>I have learned about how user interaction can be controlled and adjusted for the best experience. I used vanilla Javascript to render pages.</p>
+                <a href="https://restaurant.janoskocs.com" target="_blank">Visit website</a>
+                <br>
+                <a href="https://github.com/janoskocs/restaurant-app" target="_blank">Check out the source code</a>
+            </div>
+            <div class="landingpage" >
+                <h1>Modern Landing page UI</h1>
+                <img src="../img/landingpage.jpg" alt="Screenshot of a charity website page." draggable="false" id="landingImg">
+                <p>I worked with flexbox to position the elements. I learned about design principles and how to apply them.</p>
+                <a href="https://landingpage.janoskocs.com" target="_blank">Visit website</a>
+                <br>
+                <a href="https://github.com/janoskocs/charity-landingpage-portfolio" target="_blank">Check out the source code</a>
+            </div>
+        </div>
+        <div class="contact-form" id="contact">
+            <h1>Contact</h1>
+            <h3>I'd <span>&#10084;</span> to help!</h3>
+            <form action="../mail/send.php" method="POST" id="formId">
+                <input type="text" id="user_name" name="user_name" placeholder="Your name.." required>
+                <input type="email" id="email" name="user_email" placeholder="Your email.." required>
+                <textarea id="subject" name="user_message" placeholder="Please leave a message.." required></textarea>
+                <input type="submit" value="Send">
+                <br>
+                <p>contact@janoskocs.com</p>
+            </form>
+        </div>
+        <footer>
+            &copy; János Kócs 2020.
+            <a href="#top">&uarr;</a>
+        </footer>
+    </body>
+</html>
