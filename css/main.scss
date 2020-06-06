@@ -43,7 +43,8 @@ body {
     }//introName FIRST PAGE
 
     .container {
-        width: 90%;
+        //width: 90%;
+        background-color: $light-touch;
         margin: 0 auto;
         header {
             text-align: center;
@@ -89,7 +90,7 @@ body {
         background-color: $light-touch;
 
         padding: 2rem;
-        margin-top: 2rem;
+        //margin-top: 2rem;
         
         display: flex;
         justify-content: center;
