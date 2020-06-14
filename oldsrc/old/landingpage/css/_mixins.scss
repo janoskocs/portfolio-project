@@ -1,0 +1,10 @@
+@import "vars";
+
+
+@mixin anchor($size, $capitalize) {
+    color: $accent-second;
+    font-family: $main-font;
+    font-weight: 300;
+    font-size: $size;
+    text-transform: $capitalize;
+}

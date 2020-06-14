@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- 
+    Janos Kocs 2018
+    janoskocs.com
+    contact@janoskocs.com
+-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Tree Charity</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="headerContainer">
+                <div class="iconNav">
+                    <div class="treeIcon"><span>T</span>REE</div>
+                    <nav>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#donate">Donate</a>
+                    </nav>
+                </div>
+
+                <div class="welcome">
+                        <div class="welcomeText">
+                            <h1>Plant a tree.<br>Build a future.</h1>
+                            <p>Amazing charity organization that helps sustain nature. This is a portfolio project by János Kócs.</p>
+                            <a href="#donate">Donate</a>
+                            <a href="#about">Learn more</a>
+                        </div>
+                        <img src="img/tree-green.png" id="mainTree" alt="Picture of a tree." draggable="false">
+                    </div>
+            </div><!-- headerContainer -->
+        </header>
+
+        <div id="about">
+            <div class="aboutContainer">
+                <img src="img/tree-purple.png" alt="Picture of a purple tree" draggable="false">
+
+                <div class="aboutText">
+                    <h1>Every leaf counts.</h1>
+                    <h2>Smart. Green. Natural</h2>
+                    <p>Trees are vital. As the biggest plants on the planet, they give us oxygen, store carbon, stabilise the soil and give life to the world’s wildlife. They also provide us with the materials for tools and shelter.</p>
+                </div>
+            </div>
+        </div><!-- #about -->
+
+        <div id="donate">
+            <h1>You can donate to help earth's cause...</h1>
+            <div class="donateContainer">
+                <div class="donateBox">
+                    <h2>Garden</h2>
+                    <p>$3/mo.</p>
+                    <ul>
+                        <li>Weekly Newsletter</li>
+                        <li>Acces to slack group</li>
+                        <li>1 tree a month planted</li>
+                    </ul>
+                    <a href="#placeholder" onclick="openPopUp();">Pick</a>
+                </div>
+                <div class="donateBox">
+                    <h2>Forest</h2>
+                    <p>$10/mo.</p>
+                    <ul>
+                        <li>Weekly Newsletter</li>
+                        <li>Acces to secret content</li>
+                        <li>3 trees a month planted</li>
+                    </ul>
+                    <a href="#placeholder" onclick="openPopUp();">Pick</a>
+                </div>
+
+                <div class="donateBox">
+                    <h2>Jungle</h2>
+                    <p>$50/mo.</p>
+                    <ul>                                    <li>Meet up acces</li>
+                        <li>Be in our video</li>
+                        <li>15 trees a month planted</li>
+                    </ul>
+                    <a href="#placeholder" onclick="openPopUp();">Pick</a>
+                </div>
+            </div>
+        </div><!-- #donate -->
+        <div class="aboutContainerSecond">
+            <div class="aboutContainerFlex">
+                <div class="aboutText">
+                    <h1>Take action now.</h1>
+                    <h2>Planting trees benefits our planet.</h2>
+                    <p>Trees create an ecosystem to provide habitat and food for birds and other animals. Trees absorb carbon dioxide and potentially harmful gasses, such as sulfur dioxide, carbon monoxide, from the air and release oxygen. One large tree can supply a day's supply of oxygen for four people.</p>
+                </div>
+                <div class="bough">
+                <img src="img/upside-bough.png" alt="Picture of a purple bough"     draggable="false">
+                </div>
+            </div>
+        </div><!-- aboutContainerSecond -->
+        <div class="lastCTA">
+            <div class="lastCTAText">
+                <h1>Together we can make a difference</h1>
+                <p>Trees play a key role in capturing rainwater and reducing the risk of natural disasters like floods and landslides. Their intricate root systems act like filters; removing pollutants and slowing down the water’s absorption into the ground. This process prevents harmful waterside erosion and reduces the risk of over-saturation and flooding. According to the Food and Agriculture Association of the United Nations, a mature evergreen tree can intercept more than 15,000 litres of water every year.</p>
+            </div>
+        </div>
+        <div id="contact">
+            <h1>Contact us</h1>
+            <h2>Any question is welcome!</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+        
+        <footer>
+            <div class="treeIcon"><span>T</span>REE 2020.</div>
+            <h1>Thank you for your visit!</h1>
+            <a href="https://janoskocs.com">janoskocs.com</a>
+            <div class="footerNav">
+                <a href="#about">About</a>
+                <a href="#donate">Donate</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="spacer"></div>
+        </footer>
+        <div class="popUp">
+            <div class="popUpContent">
+                <span>&#10003;</span>
+                <h1>Thank you!</h1>
+                <p>Together we can build a future.</p>
+                <div class="close" onclick="closePopUp();">&times; Close</div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                // POPUP 
+                
+            });
+
+            const popUp = document.querySelector(".popUp");
+            const popUpContent = document.querySelector(".popUpContent");
+                
+                function openPopUp() {
+                    popUp.style.display = "block";
+                }
+                function closePopUp() {
+                    popUp.style.display = "none";
+                }
+
+                window.onclick = function(event) {
+                if (event.target == popUp) {
+                    popUp.style.display = "none";
+                }
+}
+        </script>
+    </body>
+</html>
