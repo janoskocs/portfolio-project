@@ -8,6 +8,24 @@ $handwrite-font: 'Playfair Display', serif;
 $accent-color: #f34fb8;
 $secondary-color: #5f5f5f;
 $light-touch: #efefef;
+
+@mixin container-icons {
+    padding: 2rem;
+    //margin-top: 2rem;
+    
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    font-family: $main-font;
+    font-size: 1.15rem;
+    img {
+        width: 20%
+    }
+    p {
+        margin-top: 1rem;
+    }
+}
 body {
     
     .introName {
@@ -44,9 +62,25 @@ body {
 
     .container {
         //width: 90%;
-        background-color: $light-touch;
+        
+        background: linear-gradient(125deg, rgba(242,203,245, 0.3), rgba(205,134,249, 0.3), rgba(205,248,246, 0.3), rgba(198,99,243, 0.3), #DE9BE3);
+        background-size: 800%;
+        animation: bganimation 10s infinite;
+
+        @keyframes bganimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
         margin: 0 auto;
         header {
+            
             text-align: center;
             img {
                 width: 80px;
@@ -85,29 +119,15 @@ body {
                 }
             }
         }//HEADER
-    }
-    .container-icons {
-        background-color: $light-touch;
-
-        padding: 2rem;
-        //margin-top: 2rem;
-        
-        display: flex;
-        justify-content: center;
-
-        text-align: center;
-        font-family: $main-font;
-        font-size: 1.15rem;
-        img {
-            width: 20%
+        .container-icons {
+            @include container-icons();
+           
         }
-        p {
-            margin-top: 1rem;
+        .hidden {
+            visibility: hidden;
         }
     }
-    .hidden {
-        visibility: hidden;
-    }
+    
     .about-me {
         width: 90%;
         text-align: center;
@@ -150,7 +170,7 @@ body {
         }
     }//.about-me
     .skill-icons {
-        @extend .container-icons;
+        @include container-icons();
     }
     #projects {
         width: 90%;

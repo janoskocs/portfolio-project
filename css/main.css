@@ -49,8 +49,35 @@ body .introName a:hover {
 }
 
 body .container {
-  background-color: #efefef;
+  background: linear-gradient(125deg, rgba(242, 203, 245, 0.3), rgba(205, 134, 249, 0.3), rgba(205, 248, 246, 0.3), rgba(198, 99, 243, 0.3), #DE9BE3);
+  background-size: 800%;
+  -webkit-animation: bganimation 10s infinite;
+          animation: bganimation 10s infinite;
   margin: 0 auto;
+}
+
+@-webkit-keyframes bganimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bganimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body .container header {
@@ -100,8 +127,7 @@ body .container header nav a:hover {
   color: #5f5f5f;
 }
 
-body .container-icons, body .skill-icons {
-  background-color: #efefef;
+body .container .container-icons {
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,15 +140,15 @@ body .container-icons, body .skill-icons {
   font-size: 1.15rem;
 }
 
-body .container-icons img, body .skill-icons img {
+body .container .container-icons img {
   width: 20%;
 }
 
-body .container-icons p, body .skill-icons p {
+body .container .container-icons p {
   margin-top: 1rem;
 }
 
-body .hidden {
+body .container .hidden {
   visibility: hidden;
 }
 
@@ -171,6 +197,27 @@ body .about-me .social-icons a img {
 body .about-me .social-icons a img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+body .skill-icons {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.15rem;
+}
+
+body .skill-icons img {
+  width: 20%;
+}
+
+body .skill-icons p {
+  margin-top: 1rem;
 }
 
 body #projects {
@@ -308,14 +355,14 @@ body footer a:hover {
 }
 
 @media only screen and (max-width: 720px) {
-  .container-icons, body .skill-icons {
+  .container-icons {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .container-icons div, body .skill-icons div {
+  .container-icons div {
     margin-top: 1rem;
   }
-  .container-icons div img, body .skill-icons div img {
+  .container-icons div img {
     width: 22%;
   }
   #about p {
