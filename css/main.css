@@ -368,15 +368,15 @@ body footer a:hover {
 }
 
 @media only screen and (max-width: 720px) {
-  .container-icons {
+  .container-icons, .skill-icons {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .container-icons div {
+  .container-icons div, .skill-icons div {
     margin-top: 1rem;
   }
-  .container-icons div img {
-    width: 22%;
+  .container-icons div img, .skill-icons div img {
+    width: 50%;
   }
   #about p {
     width: 80%;
