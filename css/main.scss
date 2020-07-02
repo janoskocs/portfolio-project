@@ -14,13 +14,13 @@ $light-touch: #efefef;
     //margin-top: 2rem;
     
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
     text-align: center;
     font-family: $main-font;
     font-size: 1.15rem;
     img {
-        width: 20%
+        width: 50%
     }
     p {
         margin-top: 1rem;
@@ -63,7 +63,7 @@ body {
     .container {
         //width: 90%;
         
-        background: linear-gradient(125deg, rgba(242,203,245, 0.3), rgba(205,134,249, 0.3), rgba(205,248,246, 0.3), rgba(198,99,243, 0.3), #DE9BE3);
+        background: linear-gradient(125deg, rgba(187, 230, 213, 0.3), rgba(205,134,249, 0.3), rgb(140,245,197), rgba(198,99,243, 0.3), #daf5f5);
         background-size: 800%;
         animation: bganimation 10s infinite;
 
@@ -80,7 +80,10 @@ body {
         }
         margin: 0 auto;
         header {
-            
+            background: rgba(255,255,255, 0.3);
+
+            padding-bottom: 4rem;
+
             text-align: center;
             img {
                 width: 80px;
@@ -105,15 +108,24 @@ body {
                 color: $secondary-color;
             }
             nav {
-                margin-top: 2rem;
+                margin-top: 3rem;
                 a {
+                    -webkit-box-shadow: 6px 6px 15px -10px rgba(95,95,95,0.65);
+                    -moz-box-shadow: 6px 6px 15px -10px rgba(95,95,95,0.65);
+                    box-shadow: 6px 6px 15px -10px rgba(95,95,95,0.65);
+                    background-color: #fff;
+                    padding: 1rem;
                     margin: 1rem;
+                    border-radius: 3px;
                     text-decoration: none;
                     color: $accent-color;
                     font-size: 1.3rem;
                     font-family: $main-font;
                     text-transform: uppercase;
+                    transition: .3s ease;
+                    box-shadow: $light-touch;
                     &:hover {
+                        background-color: $light-touch;
                         color: $secondary-color;
                     }
                 }
@@ -132,10 +144,10 @@ body {
         width: 90%;
         text-align: center;
         margin: 0 auto;
-        margin-top: 2rem;
+        margin-top: 6rem;
 
-        padding-bottom: 2rem;
-        border-bottom: 1px solid $secondary-color;
+        padding-bottom: 6rem;
+        
         h2 {
             font-family: $main-font;
         }
@@ -171,6 +183,9 @@ body {
     }//.about-me
     .skill-icons {
         @include container-icons();
+        background: linear-gradient(125deg, rgb(245,239,140), rgb(140,245,197), rgb(140,232,245), rgba(198,99,243, 0.3) 90%, #daafdd);
+        background-size: 800%;
+        animation: bganimation 10s infinite;
     }
     #projects {
         width: 90%;
@@ -202,7 +217,7 @@ body {
         }
         .restaurant {
             padding-bottom: 2rem;
-            border-bottom: 1px solid $secondary-color;
+            border-bottom: 1px solid $accent-color;
         }
     }//#projects
     .contact-form {
