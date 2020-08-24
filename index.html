@@ -91,7 +91,11 @@
             <form action="../mail/send.php" method="POST" id="formId">
                 <input type="text" id="user_name" name="user_name" placeholder="Your name.." required>
                 <input type="email" id="email" name="user_email" placeholder="Your email.." required>
-                <textarea id="subject" name="user_message" placeholder="Please leave a message.." required></textarea>
+                <textarea id="subject" name="user_message" placeholder="Please leave a message.." required ></textarea>
+                <div id="human-check">
+                    <input type="checkbox" id="human" required>
+                    <label for="human">I am a human.</label>
+                </div>
                 <input type="submit" value="Send">
                 <br>
                 <p>contact@janoskocs.com</p>

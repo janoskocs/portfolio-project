@@ -336,6 +336,10 @@ body .contact-form form input[type="submit"]:hover, body .contact-form form text
   background-color: #f34fb8;
 }
 
+body .contact-form form #human {
+  text-align: left;
+}
+
 body footer {
   width: 90%;
   margin: 0 auto;
