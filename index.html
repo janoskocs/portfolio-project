@@ -88,22 +88,40 @@
         <div class="contact-form" id="contact">
             <h1>Contact</h1>
             <h3>I'd <span>&#10084;</span> to help!</h3>
-            <form action="../mail/send.php" method="POST" id="formId">
+            <form onsubmit="submitForm()" method="POST" id="formId" action="../mail/send.php">
                 <input type="text" id="user_name" name="user_name" placeholder="Your name.." required>
                 <input type="email" id="email" name="user_email" placeholder="Your email.." required>
                 <textarea id="subject" name="user_message" placeholder="Please leave a message.." required ></textarea>
                 <div id="human-check">
                     <input type="checkbox" id="human" required>
                     <label for="human">I am a human.</label>
+                    <div id="errorBox">
+                    </div>
                 </div>
                 <input type="submit" value="Send">
                 <br>
                 <p>contact@janoskocs.com</p>
+                 <!--  -->
             </form>
         </div>
         <footer>
             &copy; János Kócs 2020.
             <a href="#top">&uarr;</a>
         </footer>
+
+        <script> 
+            function submitForm() {
+                let userName = document.getElementById("user_name").value;
+                let userEmail = document.getElementById("email").value;
+                let errorBox = document.getElementById("errorBox");
+
+                if (userEmail.includes(userName)) {
+                    return true;
+                } else {
+                    event.preventDefault();
+                    errorBox.innerHTML = "Something went wrong! Please make sure your name and email is real.";
+                }
+            }
+        </script>
     </body>
 </html>
